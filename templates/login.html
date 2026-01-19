@@ -20,7 +20,7 @@
             <form method="POST" action="/login">
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" name="email"
+                    <input type="email" id="email" name="email" value="{{ email or '' }}"
                            class="form-input" placeholder="prakash@example.com"
                            required autofocus>
                 </div>

@@ -19,8 +19,13 @@
                 <span class="brand-name">PocketTracker</span>
             </a>
             <div class="nav-links">
+                {% if session.user_id %}
+                <a href="{{ url_for('profile') }}">{{ session.user_name }}</a>
+                <a href="{{ url_for('logout') }}" class="nav-cta">Sign out</a>
+                {% else %}
                 <a href="{{ url_for('login') }}">Sign in</a>
                 <a href="{{ url_for('register') }}" class="nav-cta">Get started</a>
+                {% endif %}
             </div>
         </div>
     </nav>
@@ -33,7 +38,7 @@
         <div class="footer-inner">
             <span class="brand-icon">◈</span>
             <span class="footer-name">PocketTracker</span>
-            <p class="footer-copy">Track every rupee. Own your finances.</p>
+            <p class="footer-copy">Track every dollar. Own your finances.</p>
         </div>
     </footer>
 
